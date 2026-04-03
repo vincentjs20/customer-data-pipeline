@@ -1,0 +1,359 @@
+{
+  "info": {
+    "_postman_id": "df34ffce-fce1-4335-9d8b-e0e6f522a30c",
+    "name": "Customer Data Pipeline",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7120649"
+  },
+  "item": [
+    {
+      "name": "flask-mock-server",
+      "item": [
+        {
+          "name": "GET Customer by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MOCK_SERVER_URL}}/api/customers/07f923d6-ce81-50bf-d273-718293a4b5c6",
+              "host": [
+                "{{MOCK_SERVER_URL}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "07f923d6-ce81-50bf-d273-718293a4b5c6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MOCK_SERVER_URL}}/api/health",
+              "host": [
+                "{{MOCK_SERVER_URL}}"
+              ],
+              "path": [
+                "api",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all Customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{MOCK_SERVER_URL}}/api/customers?page=1&limit=10",
+              "host": [
+                "{{MOCK_SERVER_URL}}"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GET all Customers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/customers?page=1&limit=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "customers"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "Werkzeug/3.1.8 Python/3.11.15"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 03 Apr 2026 10:38:01 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2313"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"account_balance\": 3200.5,\n            \"address\": \"Surabaya\",\n            \"created_at\": \"2024-03-01T10:15:00\",\n            \"customer_id\": 21,\n            \"date_of_birth\": \"1988-03-12\",\n            \"email\": \"michael.tan@example.com\",\n            \"first_name\": \"Michael\",\n            \"last_name\": \"Tan\",\n            \"phone\": \"081234567801\"\n        },\n        {\n            \"account_balance\": 1500,\n            \"address\": \"Bandung\",\n            \"created_at\": \"2024-03-02T09:30:00\",\n            \"customer_id\": 22,\n            \"date_of_birth\": \"1995-07-22\",\n            \"email\": \"siti.rahma@example.com\",\n            \"first_name\": \"Siti\",\n            \"last_name\": \"Rahma\",\n            \"phone\": \"081234567802\"\n        },\n        {\n            \"account_balance\": 2750.75,\n            \"address\": \"Jakarta\",\n            \"created_at\": \"2024-03-03T14:20:00\",\n            \"customer_id\": 23,\n            \"date_of_birth\": \"1990-11-05\",\n            \"email\": \"andi.saputra@example.com\",\n            \"first_name\": \"Andi\",\n            \"last_name\": \"Saputra\",\n            \"phone\": \"081234567803\"\n        },\n        {\n            \"account_balance\": 1980.4,\n            \"address\": \"Yogyakarta\",\n            \"created_at\": \"2024-03-04T11:10:00\",\n            \"customer_id\": 24,\n            \"date_of_birth\": \"1993-01-17\",\n            \"email\": \"dewi.lestari@example.com\",\n            \"first_name\": \"Dewi\",\n            \"last_name\": \"Lestari\",\n            \"phone\": \"081234567804\"\n        },\n        {\n            \"account_balance\": 890.25,\n            \"address\": \"Bekasi\",\n            \"created_at\": \"2024-03-05T08:45:00\",\n            \"customer_id\": 25,\n            \"date_of_birth\": \"1998-09-09\",\n            \"email\": \"rizky.pratama@example.com\",\n            \"first_name\": \"Rizky\",\n            \"last_name\": \"Pratama\",\n            \"phone\": \"081234567805\"\n        },\n        {\n            \"account_balance\": 4100,\n            \"address\": \"Medan\",\n            \"created_at\": \"2024-03-06T16:00:00\",\n            \"customer_id\": 26,\n            \"date_of_birth\": \"1992-04-28\",\n            \"email\": \"clara.wijaya@example.com\",\n            \"first_name\": \"Clara\",\n            \"last_name\": \"Wijaya\",\n            \"phone\": \"081234567806\"\n        },\n        {\n            \"account_balance\": 500,\n            \"address\": \"Semarang\",\n            \"created_at\": \"2024-03-07T13:25:00\",\n            \"customer_id\": 27,\n            \"date_of_birth\": \"1985-06-14\",\n            \"email\": \"budi.santoso@example.com\",\n            \"first_name\": \"Budi\",\n            \"last_name\": \"Santoso\",\n            \"phone\": \"081234567807\"\n        },\n        {\n            \"account_balance\": 2200.9,\n            \"address\": \"Malang\",\n            \"created_at\": \"2024-03-08T10:50:00\",\n            \"customer_id\": 28,\n            \"date_of_birth\": \"1997-12-03\",\n            \"email\": \"nadia.putri@example.com\",\n            \"first_name\": \"Nadia\",\n            \"last_name\": \"Putri\",\n            \"phone\": \"081234567808\"\n        },\n        {\n            \"account_balance\": 1750.6,\n            \"address\": \"Depok\",\n            \"created_at\": \"2024-03-09T15:40:00\",\n            \"customer_id\": 29,\n            \"date_of_birth\": \"1991-08-19\",\n            \"email\": \"fajar.hidayat@example.com\",\n            \"first_name\": \"Fajar\",\n            \"last_name\": \"Hidayat\",\n            \"phone\": \"081234567809\"\n        },\n        {\n            \"account_balance\": 3050.1,\n            \"address\": \"Bogor\",\n            \"created_at\": \"2024-03-10T12:00:00\",\n            \"customer_id\": 30,\n            \"date_of_birth\": \"1994-02-25\",\n            \"email\": \"lina.kusuma@example.com\",\n            \"first_name\": \"Lina\",\n            \"last_name\": \"Kusuma\",\n            \"phone\": \"081234567810\"\n        }\n    ],\n    \"limit\": 10,\n    \"page\": 1,\n    \"total\": 10\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pipeline-service",
+      "item": [
+        {
+          "name": "POST Ingest Data",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{PIPELINE_SERVICE_URL}}/api/ingest",
+              "host": [
+                "{{PIPELINE_SERVICE_URL}}"
+              ],
+              "path": [
+                "api",
+                "ingest"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "POST Ingest Data",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/ingest",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "ingest"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "date",
+                  "value": "Fri, 03 Apr 2026 10:37:44 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "43"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"records_processed\": 10\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET all Customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{PIPELINE_SERVICE_URL}}/api/customers?page=1&limit=10",
+              "host": [
+                "{{PIPELINE_SERVICE_URL}}"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GET all Customers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/customers?page=1&limit=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "customers"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "date",
+                  "value": "Fri, 03 Apr 2026 10:46:41 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "2672"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"last_name\": \"Tan\",\n            \"phone\": \"081234567801\",\n            \"customer_id\": \"a1f3c9d2-6c4b-4a2d-9f8e-1b2c3d4e5f60\",\n            \"first_name\": \"Michael\",\n            \"date_of_birth\": \"1988-03-12\",\n            \"email\": \"michael.tan@example.com\",\n            \"address\": \"Surabaya\",\n            \"account_balance\": 3200.5,\n            \"created_at\": \"2024-03-01T10:15:00\"\n        },\n        {\n            \"last_name\": \"Rahma\",\n            \"phone\": \"081234567802\",\n            \"customer_id\": \"b2a4d8e1-7f3c-4b6a-8d2e-2c3d4e5f6071\",\n            \"first_name\": \"Siti\",\n            \"date_of_birth\": \"1995-07-22\",\n            \"email\": \"siti.rahma@example.com\",\n            \"address\": \"Bandung\",\n            \"account_balance\": 1500,\n            \"created_at\": \"2024-03-02T09:30:00\"\n        },\n        {\n            \"last_name\": \"Saputra\",\n            \"phone\": \"081234567803\",\n            \"customer_id\": \"c3b5e9f2-8a4d-4c7b-9e3f-3d4e5f607182\",\n            \"first_name\": \"Andi\",\n            \"date_of_birth\": \"1990-11-05\",\n            \"email\": \"andi.saputra@example.com\",\n            \"address\": \"Jakarta\",\n            \"account_balance\": 2750.75,\n            \"created_at\": \"2024-03-03T14:20:00\"\n        },\n        {\n            \"last_name\": \"Lestari\",\n            \"phone\": \"081234567804\",\n            \"customer_id\": \"d4c6f0a3-9b5e-4d8c-af40-4e5f60718293\",\n            \"first_name\": \"Dewi\",\n            \"date_of_birth\": \"1993-01-17\",\n            \"email\": \"dewi.lestari@example.com\",\n            \"address\": \"Yogyakarta\",\n            \"account_balance\": 1980.4,\n            \"created_at\": \"2024-03-04T11:10:00\"\n        },\n        {\n            \"last_name\": \"Pratama\",\n            \"phone\": \"081234567805\",\n            \"customer_id\": \"e5d701b4-ac6f-4e9d-b051-5f60718293a4\",\n            \"first_name\": \"Rizky\",\n            \"date_of_birth\": \"1998-09-09\",\n            \"email\": \"rizky.pratama@example.com\",\n            \"address\": \"Bekasi\",\n            \"account_balance\": 890.25,\n            \"created_at\": \"2024-03-05T08:45:00\"\n        },\n        {\n            \"last_name\": \"Wijaya\",\n            \"phone\": \"081234567806\",\n            \"customer_id\": \"f6e812c5-bd70-4fae-c162-60718293a4b5\",\n            \"first_name\": \"Clara\",\n            \"date_of_birth\": \"1992-04-28\",\n            \"email\": \"clara.wijaya@example.com\",\n            \"address\": \"Medan\",\n            \"account_balance\": 4100,\n            \"created_at\": \"2024-03-06T16:00:00\"\n        },\n        {\n            \"last_name\": \"Santoso\",\n            \"phone\": \"081234567807\",\n            \"customer_id\": \"07f923d6-ce81-50bf-d273-718293a4b5c6\",\n            \"first_name\": \"Budi\",\n            \"date_of_birth\": \"1985-06-14\",\n            \"email\": \"budi.santoso@example.com\",\n            \"address\": \"Semarang\",\n            \"account_balance\": 500,\n            \"created_at\": \"2024-03-07T13:25:00\"\n        },\n        {\n            \"last_name\": \"Putri\",\n            \"phone\": \"081234567808\",\n            \"customer_id\": \"18a034e7-df92-51c0-e384-8293a4b5c6d7\",\n            \"first_name\": \"Nadia\",\n            \"date_of_birth\": \"1997-12-03\",\n            \"email\": \"nadia.putri@example.com\",\n            \"address\": \"Malang\",\n            \"account_balance\": 2200.9,\n            \"created_at\": \"2024-03-08T10:50:00\"\n        },\n        {\n            \"last_name\": \"Hidayat\",\n            \"phone\": \"081234567809\",\n            \"customer_id\": \"29b145f8-e0a3-52d1-f495-93a4b5c6d7e8\",\n            \"first_name\": \"Fajar\",\n            \"date_of_birth\": \"1991-08-19\",\n            \"email\": \"fajar.hidayat@example.com\",\n            \"address\": \"Depok\",\n            \"account_balance\": 1750.6,\n            \"created_at\": \"2024-03-09T15:40:00\"\n        },\n        {\n            \"last_name\": \"Kusuma\",\n            \"phone\": \"081234567810\",\n            \"customer_id\": \"3ac25609-f1b4-53e2-05a6-a4b5c6d7e8f9\",\n            \"first_name\": \"Lina\",\n            \"date_of_birth\": \"1994-02-25\",\n            \"email\": \"lina.kusuma@example.com\",\n            \"address\": \"Bogor\",\n            \"account_balance\": 3050.1,\n            \"created_at\": \"2024-03-10T12:00:00\"\n        }\n    ],\n    \"total\": 10,\n    \"page\": 1,\n    \"limit\": 10\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET Customer by id Copy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{PIPELINE_SERVICE_URL}}/api/customers/07f923d6-ce81-50bf-d273-718293a4b5c6",
+              "host": [
+                "{{PIPELINE_SERVICE_URL}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "07f923d6-ce81-50bf-d273-718293a4b5c6"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "GET Customer by id Copy",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/customers/07f923d6-ce81-50bf-d273-718293a4b5c6",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "customers",
+                    "07f923d6-ce81-50bf-d273-718293a4b5c6"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "date",
+                  "value": "Fri, 03 Apr 2026 10:47:46 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "263"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"last_name\": \"Santoso\",\n    \"phone\": \"081234567807\",\n    \"customer_id\": \"07f923d6-ce81-50bf-d273-718293a4b5c6\",\n    \"first_name\": \"Budi\",\n    \"date_of_birth\": \"1985-06-14\",\n    \"email\": \"budi.santoso@example.com\",\n    \"address\": \"Semarang\",\n    \"account_balance\": 500,\n    \"created_at\": \"2024-03-07T13:25:00\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "MOCK_SERVER_URL",
+      "value": "http://localhost:5000",
+      "type": "default"
+    },
+    {
+      "key": "PIPELINE_SERVICE_URL",
+      "value": "http://localhost:8000",
+      "type": "default"
+    }
+  ]
+}
