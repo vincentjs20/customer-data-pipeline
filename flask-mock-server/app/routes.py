@@ -30,12 +30,14 @@ def get_customers():
     })
 
 
-# Get single customer
-@bp.route("/api/customers/<int:customer_id>", methods=["GET"])
+@bp.route("/api/customers/<customer_id>", methods=["GET"])
 def get_customer(customer_id):
     customers = load_customers()
 
-    customer = next((c for c in customers if c["customer_id"] == customer_id), None)
+    customer = next(
+        (c for c in customers if str(c["customer_id"]) == str(customer_id)),
+        None
+    )
 
     if not customer:
         return jsonify({"error": "Customer not found"}), 404
